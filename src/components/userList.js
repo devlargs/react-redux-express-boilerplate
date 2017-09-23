@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'; 
 
-import { selectUser } from '../actions';
+import { selectUser, addUser } from '../actions';
 
 class UserList extends Component {
     render(){
-        console.log(this.props)
         return (
             <ul>
                 {

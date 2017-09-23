@@ -1,12 +1,9 @@
-export default function(){
-    return [
-        {
-            name: 'Ralph Largo',
-            age: new Date().getFullYear() - 1996 
-        },
-        {
-            name: 'Morisette Amon',
-            age: new Date().getFullYear() - 1996
-        }
-    ]
+export default function(state=[{name: 'Ralph'}], action){
+    switch(action.type){
+        case "USER_SELECTED": 
+            console.log(action)
+            return state.concat({name: 'Louise'});
+        break;
+    };
+    return state;
 }
