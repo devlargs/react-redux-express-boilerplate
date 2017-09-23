@@ -1,14 +1,11 @@
 import React, { Component} from 'react';
 import { render } from 'react-dom';
+import { Provider } from 'react-redux'; 
+import store from './store';
+import App from './app';
 
-export default class App extends Component {
-    render(){
-        return (
-            <div>
-                <h1>React Redux Express Boilerplate</h1>
-            </div>
-        );
-    }
-}
-
-render(<App/>, document.getElementById('container'));
+render(
+    <Provider store={store}>  
+        <App/>
+    </Provider>
+    , document.getElementById('container'));
